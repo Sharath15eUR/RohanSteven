@@ -1,0 +1,43 @@
+----Question 1
+ubuntu@ubuntu:~$ touch file1
+ubuntu@ubuntu:~$ ls -lrt file1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jan 23 08:11 file1
+ubuntu@ubuntu:~$ chmod a+x file1
+ubuntu@ubuntu:~$ ls -lrt file1
+-rwxrwxr-x 1 ubuntu ubuntu 0 Jan 23 08:11 file1
+
+----Question 2 
+ubuntu@ubuntu:~$ touch file2
+ubuntu@ubuntu:~$ ls -lrt file2
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jan 23 08:12 file2
+ubuntu@ubuntu:~$ chmod g-w file2
+ubuntu@ubuntu:~$ ls -lrt file2
+-rw-r--r-- 1 ubuntu ubuntu 0 Jan 23 08:12 file2
+
+----Question 3
+ubuntu@ubuntu:~$ mkdir dir1 dir2
+ubuntu@ubuntu:~$ touch dir1 file1
+ubuntu@ubuntu:~$ ln -s dir1/file1 dir2/file_link
+ubuntu@ubuntu:~$ cd dir2
+ubuntu@ubuntu:~/dir2$ ls
+file_link
+ubuntu@ubuntu:~/dir2$ cd ..
+
+----Question 4
+ubuntu@ubuntu:~$ ps -au
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ubuntu      2014  0.0  0.2 244808  5760 tty2     Ssl+ 08:10   0:00 /usr/libexec/
+ubuntu      2020  2.8  4.0 337732 90988 tty2     Sl+  08:10   0:06 /usr/lib/xorg
+ubuntu      2100  0.1  0.7 307296 16256 tty2     Sl+  08:10   0:00 /usr/libexec/
+ubuntu      3612  0.0  0.2  20100  4992 pts/0    Ss   08:11   0:00 bash
+ubuntu      4080 66.6  0.1  22720  4352 pts/0    R+   08:14   0:00 ps -au
+
+----Question 5
+ubuntu@ubuntu:~$ mkdir dir
+ubuntu@ubuntu:~$ touch dir/file1 dir/file2 dir/file3
+ubuntu@ubuntu:~$ ls -lt dir >  Q5_output.txt
+ubuntu@ubuntu:~$ cat Q5_output.txt
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jan 23 08:15 file1
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jan 23 08:15 file2
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jan 23 08:15 file3
