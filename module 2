@@ -1,1 +1,55 @@
+### Question 1
+find . -type f -size +1M > large_files.txt
+cat large_files.txt
+O/P
+./3mb_file.txt
+./6mb_file.txt
+./4mb_file.txt
 
+### Question 2
+sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+cat updated_config.txt
+O/P
+# Database configuration 
+database_host = 127.0.0.1
+database_port = 3306
+database_user = root
+database_password = EmbedUr@2025
+
+#Server Settings
+server_address = 127.0.0.1:5000
+log_level = DEBUG
+
+#Email notification
+smtp_server = 127.0.0.1
+smtp_port = 25
+
+### Question 3
+grep -i ERROR log.txt | grep -iv DEBUG > filtered_log.txt
+cat filtered_log.txt
+o/p
+DEBUG: Starting the application initialization.
+ERROR: Unable to connect to the database.
+INFO: User 'admin' logged in successfully.
+DEBUG: Fetching configuration settings from the server.
+ERROR: DEBUG - Configuration settings could not be applied.
+INFO: Scheduled job 'backup' completed successfully.
+DEBUG: Connection to server timed out. Retrying...
+ERROR: Failed to fetch data from API endpoint '/users'.
+INFO: Maintenance mode activated.
+ERROR: DEBUG - Query execution failed due to a syntax error.
+DEBUG: Reloading application modules.
+ERROR: Missing required parameter in the request.
+INFO: Shutting down the system gracefully.
+DEBUG: Closing unused network connections.
+ERROR: DEBUG - Unexpected server response received.
+
+### Question 4
+ps --no-header aux --sort -rss | head -n 1 | awk '{print $2}' | xargs kill -9
+
+### Question 5
+ip route | awk '{print $3}' | sort -u > output.txt
+cat output.txt
+O/P
+10.0.2.2
+enp0s3
