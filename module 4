@@ -20,10 +20,10 @@ echo "The ${output_file} file is ready to view"
 
 
 O/P
-dhanu@EmbedUR:~/Assignment/Dhanu_Linux Training_Module 4$ ./command.sh
-input file name with extension :dhanu.txt
+rohan@EmbedUR:~/Assignment/Rohan_Linux Training_Module 4$ ./command.sh
+input file name with extension :rohan.txt
 !!Invalid file or file seems to be empty!! try again 
 input file name with extension :input.txt
 output file name with extension :output.txt
 The output.txt file is ready to view
-dhanu@EmbedUR:~/Assignment/Rohan_Linux Training_Module 4$ 
+rohan@EmbedUR:~/Assignment/Rohan_Linux Training_Module 4$ 
